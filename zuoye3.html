@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <meta charset="utf-8">
+    <title>轮播图测试</title>
+    <!-- 外部导入Css文件，链接式 -->
+    <link href="css/slideShow.css" rel="stylesheet" type="texts">
+    <style>
+        p 
+        {
+           text-align: center;
+             font-size: 25px;
+              color: cadetblue;
+              font-family: fantasy;
+           }
+
+/* id选择器 */
+           #hr1
+            {
+                background-color: cadetblue;
+                height: 2px;
+                width: 75%;
+            }
+
+            /* 类选择器 */
+               .imgbox {
+             border-top: 5px solid cadetblue;
+             /* 避免因窗口变化影响图片效果 */
+            width: 60%;
+            height: 40%;
+            margin: 0 auto;
+         }
+
+            .img {
+            width: 40%;
+             height: 40%;
+            margin: 0 auto;
+            display: none;
+        }
+   </style>
+   <!-- 建立一个div控件作为图片框 -->
+   <div class="imgBox">
+    <!-- alt：图片路径失败时替换显示内容 -->
+    <img width="480" height="300" class="img-slide img" style="display: none;" alt="" src="4.jpg">
+    <img width="480" height="300" class="img-slide img" style="display: block;" alt="" src="5.jpg">
+    <img width="480" height="300" class="img-slide img" style="display: none;" alt="" src="6.jpg"> 
+    <img width="480" height="500" class="img-slide img" style="display: none;" alt="" src="7.jpg"> 
+</div>
+<script type="text/javascript">
+    // index：索引， len：长度
+    var index = 0, len;
+    // 类似获取一个元素数组
+    var imgBox = document.getElementsByClassName("img-slide");
+    len = imgBox.length;
+    imgBox[index].style.display = 'block';
+    // 逻辑控制函数
+    function slideShow() {
+        index ++;
+        // 防止数组溢出
+        if(index >= len) index = 0;
+        // 遍历每一个元素
+        for(var i=0; i<len; i++) {
+            imgBox[i].style.display = 'none';
+        }
+        // 每次只有一张图片显示
+        imgBox[index].style.display = 'block';
+    }
+    
+    // 定时器，间隔3s切换图片
+    setInterval(slideShow, 2000);
+    
+</script>
+<body>
+
+    
+    <meta charset="utf-8">
+    <title>轮播图测试</title>
+<!-- 外部导入Css文件，链接式 -->
+<link href="css/slideShow.css" rel="stylesheet" type="texts">    
+
+<style>
+     p 
+     {
+        text-align: center;
+          font-size: 25px;
+           color: cadetblue;
+           font-family: fantasy;
+        }
+
+/* id选择器 */
+        #hr1
+         {
+             background-color: cadetblue;
+             height: 2px;
+             width: 75%;
+         }
+
+         /* 类选择器 */
+            .imgbox {
+          border-top: 5px solid cadetblue;
+          /* 避免因窗口变化影响图片效果 */
+         width: 60%;
+         height: 40%;
+         margin: 0 auto;
+      }
+
+         .img {
+         width: 40%;
+          height: 40%;
+         margin: 0 auto;
+         display: none;
+     }
+</style>
+
+
+    <!-- 建立一个div控件作为图片框 -->
+    <div class="imgBox">
+        <!-- alt：图片路径失败时替换显示内容 -->
+        <img width="480" class="img-slide img" style="display: none;" alt="我的照片1" src="D:\nginx-1.18.0\html\picture\10.jpg">
+        <img width="480" class="img-slide img" style="display: block;" alt="" src="D:\nginx-1.18.0\html\picture\11.jpg">
+        <img width="480" class="img-slide img" style="display: none;" alt="我的照片3" src="D:\nginx-1.18.0\html\picture\12.jpg">
+        <img width="480" class="img-slide img" style="display: none;" alt="" src="D:\nginx-1.18.0\html\picture\13.jpg">
+        <img width="480" class="img-slide img" style="display: none;" alt="我的照片2" src="D:\nginx-1.18.0\html\picture\11.jpg">
+          
+    </div>
+
+
+<script type="text/javascript">
+    // index：索引， len：长度
+    var index = 0, len;
+    // 类似获取一个元素数组
+    var imgBox = document.getElementsByClassName("img-slide");
+    len = imgBox.length;
+    imgBox[index].style.display = 'block';
+    // 逻辑控制函数
+    function slideShow() {
+        index ++;
+        // 防止数组溢出
+        if(index >= len) index = 0;
+        // 遍历每一个元素
+        for(var i=0; i<len; i++) {
+            imgBox[i].style.display = 'none';
+        }
+        // 每次只有一张图片显示
+        imgBox[index].style.display = 'block';
+    }
+    
+    // 定时器，间隔3s切换图片
+    setInterval(slideShow, 2000);
+    
+</script>
+班级:通信工程1901 <p></p>
+ 姓名：唐延波<p></p>
+ 学号：201916180125 <p></p>
+ 自我介绍：<br>
+ 老师好，图片上的就是我，嘻嘻。我是湖南永州人，是一个湖南土生土长的南方人。<br>
+ 我的之前的学习生活比较平凡，幼儿园 小学 初中，可能偶尔有点调皮，有点小打小<br>
+ 闹。但是高中就有点不应有啦，我笑过，累过，快乐过，伤心过，也叛逆过，为我的<br>
+ 中学时代带去了一些不一样的色彩。而大学，我参加了社团————合唱团，与同学朋友<br>
+ 们一起上台唱歌演出，我还获得过一个小小的荣誉（第一指挥，哈哈）<br>
+ 对了，还有，这是我的学校<a href="https://www.csust.edu.cn/">长沙理工大学</a><br>
+ 欢迎大家来找我，我们一起玩耍，一起疯狂！<p></p>
+</body>
+<html>
